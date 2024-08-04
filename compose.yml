@@ -1,0 +1,12 @@
+services:
+  frontend:
+    image: node:latest
+    container_name: frontend
+    hostname: frontend
+    volumes:
+      - ./:/frontend/
+      - .cache/.vscode-server/:/root/.vscode-server/
+    ports:
+      - 8001:8001
+    stop_grace_period: 1s
+    command: sleep 1000000
